@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Top navigation bar */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 247, 247, 0.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
+.topbar nav a {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.topbar nav a:hover {
+  color: #007acc;
+}
+
+/* Layout */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 2rem;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 4.5rem; /* leave space for topbar */
+  align-self: start;
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.avatar-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.role {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 0.3rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.links a:hover {
+  color: #007acc;
+}
+
+/* Main content */
+
+.content {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #004c7c;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.item {
+  margin-bottom: 1.2rem;
+}
+
+ul {
+  margin-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Skills grid */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.skills-grid h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  top: 0.3rem;
+  bottom: 0;
+  width: 2px;
+  background: #d5e3f0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.03rem;
+  top: 0.15rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #007acc;
+}
+
+.timeline-content {
+  background: #f9fbfe;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Buttons for project links */
+
+.btn-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #007acc;
+  font-size: 0.85rem;
+}
+
+.btn-link:hover {
+  background: #007acc;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    top: auto;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .topbar nav a {
+    margin-left: 0;
+    margin-right: 0.7rem;
+  }
+
+  .timeline::before {
+    left: 0.45rem;
+  }
+
+  .timeline-dot {
+    left: -0.13rem;
+  }
+}
